@@ -47,7 +47,7 @@ function App() {
   }
 
   return (
-    <div className='App'>
+    <div className="App">
       <Fruit fruits={fruits}/>
       <hr></hr>
       <Car />
