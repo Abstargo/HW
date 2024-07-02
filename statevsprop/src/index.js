@@ -1,64 +1,44 @@
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import React from 'react';
 
-
-const Fruit = (props) => {
-
+const TypesOfFruit = () => {
   return (
-    <div className='fruit'>
-      <h1> List of  Fruits</h1>
-      <p>Name: {props.fruits.name}</p>
-      <p>Color: {props.fruits.color}</p>
+    <div>
+      <h2>Fruits:</h2>
+      <ul>
+        <li>Apples</li>
+        <li>Blueberries</li>
+        <li>Strawberries</li>
+        <li>Bananas</li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-class Car extends Component {
-  constructor(){
-    super()
-    this.state = {
-      car: 'Ferrari'
-    }
-  }
+const Fruits = () => {
+  return (
+    <div>
+      {/* Change code below this line */}
+      <TypesOfFruit />
+      {/* Change code above this line */}
+    </div>
+  );
+};
 
-  changeMessage() {
-    this.setState({
-      car: 'Jaguar'
-    })
+class TypesOfFood extends React.Component {
+  constructor(props) {
+    super(props);
   }
 
   render() {
     return (
-      <div className='App'>
-        <h1>{this.state.car}</h1>
-        <button onClick={() => this.changeMessage()}>
-          Change</button>
+      <div>
+        <h1>Types of Food:</h1>
+        {/* Change code below this line */}
+        <Fruits />
+        {/* Change code above this line */}
       </div>
-    )
+    );
   }
-}
+};
 
-function App() {
-  const fruits = 
-  {
-    name: "Mango",
-    color: "Yellow"
-  }
-
-  return (
-    <div className="App">
-      <Fruit fruits={fruits}/>
-      <hr></hr>
-      <Car />
-    </div>
-  )
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-
+export default TypesOfFood;
